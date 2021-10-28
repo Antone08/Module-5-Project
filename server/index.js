@@ -37,21 +37,23 @@ let randomFortune = fortunes[randomIndex];
 
 
 app.get("/api/motivation", (req, res) => {
-  const motivationBest = ["Good, better, best. Never let it rest. 'Til your good is better and your better is best.",
+  const motivations = ["Good, better, best. Never let it rest. 'Til your good is better and your better is best.",
   "It always seems impossible until it's done.", "A good head and a good heart are always a formidable combination.",
   "Celebrate Your Small Wins",
 ];
 
-let randomIndex = Math.floor(Math.random() * motivationBest.length);
-let randomMotivation = motivationBest[randomIndex];
+let randomIndex = Math.floor(Math.random() * motivations.length);
+let randomMotivation = motivations[randomIndex];
 
- res.status(200).send(randomMotivation);
+ res.status(200).send(randomMotivation)
 });
 
 
-// app.get("/api/motivation", (req, res) => {
-//   res.status(301).redirect("https://www.youtube.com/watch?v=fxIlVbvOHyY")
-// });
+app.get("/api/motivation", (req, res) => {
+  res.status(301).redirect("https://www.youtube.com/watch?v=VG2h3zlm-ng")
+});
+
+
 
 
 
